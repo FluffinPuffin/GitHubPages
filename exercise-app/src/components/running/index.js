@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 function RunningExercise({ name }) {
     // Set useState
-    let array = [];
     const [count, setCount] = useState(0);
     const [currentTime, setCurrentTime] = useState('');
+    const [array, setArray] = useState([]);
 
     // Add by 1
     const handleIncrement = () => {
@@ -12,32 +12,26 @@ function RunningExercise({ name }) {
         const formattedTime = now.toLocaleTimeString();
         setCurrentTime(formattedTime);
         setCount(count + 1);
-        array.push(count + formattedTime);
+        setArray([...array, `${count + 1} - ${formattedTime}`]);
     };
 
     // Reset to 0
-    const handleReset = (array) => {
+    const handleReset = () => {
         setCount(0);
         setCurrentTime('');
-        for (let i = 0; i < array.length; i++) {
-            array.pop();
-        }
+        setArray([]);
     };
 
-    const updateArray = (array) => {
-        const listLaps = array.map((item) =>
-            <li>{item}</li>
-        );
-        return ({listLaps});
-    };
-
-    // Display this to screen <div>Lap: {count} - Current Time: {currentTime}</div>
     return (
-        <div class="running">
+        <div className="running">
             <h2>{name}</h2>
             <button onClick={handleIncrement}>Lap</button>
             <button onClick={handleReset}>Reset</button>
-            <ul>{updateArray}</ul>
+            <ul>
+                {array.map((item, index) => (
+                    <li key={index}>{item}</li>
+                ))}
+            </ul>
         </div>
     );
 }
