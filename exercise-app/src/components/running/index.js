@@ -12,7 +12,7 @@ function RunningExercise({ name }) {
         const formattedTime = now.toLocaleTimeString();
         setCurrentTime(formattedTime);
         setCount(count + 1);
-        setArray([...array, "Lap: "`${count + 1} - "Time: "${formattedTime}`]);
+        setArray([...array, `Lap:  ${count + 1} Time: ${formattedTime}`]);
     };
 
     // Reset to 0

@@ -17,8 +17,8 @@ let exerciseData = [
     description: "30 mins",
   },
   {
-    name: "Squats",
-    type: "Repetition",
+    name: "Lifts",
+    type: "Duration",
     description: "20 Reps - 2 Sets",
   },
 
@@ -38,7 +38,7 @@ function App() {
   if (selectedExercise == null) {
     content = (
       <div className="main-page-buttons">
-        <h1>Do Some Exercise</h1>
+        <h1>Welcome to my Exercise App</h1>
         <h3>Recommended Exercises</h3>
         {exerciseData.map((exercise, index) => (
           <button key={index} onClick={() => button(exercise)}>
