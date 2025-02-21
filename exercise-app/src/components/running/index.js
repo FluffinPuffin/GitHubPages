@@ -25,15 +25,10 @@ function RunningExercise({ name }) {
     };
 
     const updateArray = (array) => {
-        if (array === undefined) {
-        } else {
-            const listLaps = array.map((item) =>
-                <li>{item}</li>
-            );
-            return (
-                <ul>{listLaps}</ul>
-            );
-        }
+        const listLaps = array.map((item) =>
+            <li>{item}</li>
+        );
+        return ({listLaps});
     };
 
     // Display this to screen <div>Lap: {count} - Current Time: {currentTime}</div>
@@ -42,8 +37,7 @@ function RunningExercise({ name }) {
             <h2>{name}</h2>
             <button onClick={handleIncrement}>Lap</button>
             <button onClick={handleReset}>Reset</button>
-            <div>Laps: Time: </div>
-            {updateArray()}
+            <ul>{updateArray}</ul>
         </div>
     );
 }
