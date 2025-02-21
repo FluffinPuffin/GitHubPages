@@ -1,5 +1,6 @@
-import Duration from "./components/DurationExercise";
-import Repetition from "./components/RepetitionExercise";
+import Duration from "./components/duration";
+import Repetition from "./components/repetition";
+import Running from "./components/running";
 import './App.css';
 import React, { useState } from 'react';
 
@@ -12,7 +13,7 @@ let exerciseData = [
   },
   {
     name: "Runs",
-    type: "Duration",
+    type: "Running",
     description: "30 mins",
   },
   {
@@ -53,6 +54,8 @@ function App() {
       content = <Duration name={selectedExercise.name} />;
     } else if (selectedExercise.type === "Repetition") {
       content = <Repetition name={selectedExercise.name} />;
+    } else if (selectedExercise.type === "Running") {
+      content = <Running name={selectedExercise.name} />;
     }
   }
 
