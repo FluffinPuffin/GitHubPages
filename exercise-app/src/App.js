@@ -9,7 +9,7 @@ let exerciseData = [
   {
     name: "Pushups",
     type: "Repetition",
-    description: "20 Reps - 2 Sets",
+    description: "20 Reps \n 2 Sets",
   },
   {
     name: "Runs",
@@ -19,7 +19,7 @@ let exerciseData = [
   {
     name: "Lifts",
     type: "Duration",
-    description: "20 Reps - 2 Sets",
+    description: "20 Reps \n 2 Sets",
   },
 
 ];
