@@ -1,26 +1,50 @@
 import React, { useState } from 'react';
 
 function RepetitionExercise({ name }) {
-    // Set useState
-    const [count, setCount] = useState(0);
+    const [setCount, setSetCount] = useState(0);
+    const [repCount, setRepCount] = useState(0);
 
-    // Add by 1
-    const handleIncrement = () => {
-        setCount(count + 1);
+    const increaseSetCount = () => {
+        setSetCount(setCount + 1);
+        setRepCount(0); // Reset Reps whenever Set increases
     };
 
-    // Reset to 0
-    const handleReset = () => {
-        setCount(0);
+    const decreaseSetCount = () => {
+        if (setCount > 0) {
+            setSetCount(setCount - 1);
+        }
+        setRepCount(0); // Reset Reps if Set is decreased
     };
 
-    // Display this to screen
+    const increaseRepCount = () => {
+        setRepCount(repCount + 1);
+    };
+
+    const decreaseRepCount = () => {
+        if (repCount > 0) {
+            setRepCount(repCount - 1);
+        }
+    };
+
     return (
-        <div class="repetition">
+        <div className="repetition">
             <h2>{name}</h2>
-            <div>Count: {count}</div>
-            <button onClick={handleIncrement}>Increase</button>
-            <button onClick={handleReset}>Reset</button>
+            <div className="count-container">
+                <div className="count">
+                    <span>Sets: {setCount}</span>
+                </div>
+                <div className="count">
+                    <span>Reps: {repCount}</span>
+                </div>
+            </div>
+            <div className="buttons">
+                <button onClick={increaseSetCount}>Increase Set</button>
+                <button onClick={increaseRepCount}>Increase Rep</button>
+            </div>
+            <div className="buttons">
+                <button onClick={decreaseSetCount}>Decrease Set</button>
+                <button onClick={decreaseRepCount}>Decrease Rep</button>
+            </div>
         </div>
     );
 }
