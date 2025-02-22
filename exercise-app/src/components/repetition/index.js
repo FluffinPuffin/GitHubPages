@@ -38,12 +38,14 @@ function RepetitionExercise({ name }) {
                 </div>
             </div>
             <div className="buttons">
-                <button onClick={increaseSetCount}>Increase Set</button>
-                <button onClick={increaseRepCount}>Increase Rep</button>
+                <div className="title">Rep</div>
+                <button onClick={increaseSetCount}>^</button>
+                <button onClick={increaseRepCount}>^</button>
             </div>
             <div className="buttons">
-                <button onClick={decreaseSetCount}>Decrease Set</button>
-                <button onClick={decreaseRepCount}>Decrease Rep</button>
+                <div className="title">Set</div>
+                <button onClick={decreaseSetCount}>v</button>
+                <button onClick={decreaseRepCount}>v</button>
             </div>
         </div>
     );

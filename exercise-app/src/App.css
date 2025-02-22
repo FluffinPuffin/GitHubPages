@@ -45,7 +45,6 @@ body {
   background-color: #8C2F13;
 }
 
-/* General repetition container styling */
 .repetition {
   display: flex;
   flex-direction: column;
@@ -58,7 +57,6 @@ body {
   margin: 20px auto;
 }
 
-/* Style for the heading */
 .repetition h2 {
   font-size: 24px;
   font-weight: bold;
@@ -66,7 +64,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* Flexbox to place counters side by side */
 .repetition .count-container {
   display: flex;
   justify-content: space-between;
@@ -74,7 +71,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* Style for individual count (Sets and Reps) */
 .repetition .count {
   font-size: 28px;
   font-weight: bold;
@@ -83,25 +79,20 @@ body {
   border-radius: 10px;
   padding: 20px;
   width: 48%;
-  /* Adjust width to fit side by side */
   text-align: center;
   margin-right: 10px;
-  /* Add margin to the right for more space between the two */
 }
 
-/* Remove margin for the last counter */
 .repetition .count:last-child {
   margin-right: 0;
 }
 
-/* Buttons container */
 .repetition .buttons {
   display: flex;
   justify-content: space-around;
   width: 100%;
 }
 
-/* Style for buttons */
 .repetition button {
   outline: none;
   border: none;
@@ -115,12 +106,9 @@ body {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Button hover effect */
 .repetition button:hover {
   background-color: #8C2F13;
 }
-
-
 
 .running button {
   outline: none;
