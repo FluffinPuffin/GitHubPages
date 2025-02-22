@@ -17,7 +17,7 @@ let exerciseData = [
     description: "30 mins",
   },
   {
-    name: "Lifts",
+    name: "Yoga",
     type: "Duration",
     description: "20 Reps - 2 Sets",
   },
