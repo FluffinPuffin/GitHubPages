@@ -35,20 +35,21 @@ body {
 }
 
 .main-page-buttons button {
+  justify-content: center;
+  align-items: center;
   width: 200px;
-  height: 200px;
-  outline: none;
+  height: 150px;
+  padding: 20px;
   border: none;
-  padding: 50px 50px;
   margin: 10px;
   border-radius: 30px;
   font-size: 20px;
   cursor: pointer;
+  text-align: center;
+  background-color: #252527;
+  color: #c9c9c9;
 }
 
-.description {
-  white-space: pre-line;
-}
 
 ul {
   list-style-type: none;
