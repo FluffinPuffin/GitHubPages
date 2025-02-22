@@ -20,6 +20,10 @@ function DurationExercise({ name }) {
         setIsActive(true);
     };
 
+    const stop = () => {
+        setIsActive(false);
+    }
+
     const reset = () => {
         setIsActive(false);
         setTimer(0);
@@ -42,6 +46,7 @@ function DurationExercise({ name }) {
 
             <div className="buttons">
                 <button onClick={start}>Start</button>
+                <button onClick={stop}>Stop</button>
                 <button onClick={reset}>Reset</button>
             </div>
         </div>

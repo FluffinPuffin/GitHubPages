@@ -26,7 +26,7 @@ function RunningExercise({ name }) {
             <button onClick={handleReset}>Reset</button>
             <ul>
                 {array.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li key={index} className="listItem">{item}</li>
                 ))}
             </ul>
         </div>
