@@ -134,6 +134,11 @@ body {
   text-align: center;
   background-color: #252527;
   color: #c9c9c9;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.main-page-buttons button:hover {
+  background-color: #8C2F13;
 }
 
 

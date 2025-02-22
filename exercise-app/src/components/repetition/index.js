@@ -6,14 +6,12 @@ function RepetitionExercise({ name }) {
 
     const increaseSetCount = () => {
         setSetCount(setCount + 1);
-        setRepCount(0); // Reset Reps whenever Set increases
     };
 
     const decreaseSetCount = () => {
         if (setCount > 0) {
             setSetCount(setCount - 1);
         }
-        setRepCount(0); // Reset Reps if Set is decreased
     };
 
     const increaseRepCount = () => {
@@ -38,12 +36,10 @@ function RepetitionExercise({ name }) {
                 </div>
             </div>
             <div className="buttons">
-                <div className="title">Rep</div>
                 <button onClick={increaseSetCount}>^</button>
                 <button onClick={increaseRepCount}>^</button>
             </div>
             <div className="buttons">
-                <div className="title">Set</div>
                 <button onClick={decreaseSetCount}>v</button>
                 <button onClick={decreaseRepCount}>v</button>
             </div>
