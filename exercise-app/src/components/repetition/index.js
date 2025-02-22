@@ -1,29 +1,35 @@
 import React, { useState } from 'react';
 
 function RepetitionExercise({ name }) {
+    // useStates
     const [setCount, setSetCount] = useState(0);
     const [repCount, setRepCount] = useState(0);
 
+    // increase set
     const increaseSetCount = () => {
         setSetCount(setCount + 1);
     };
 
+    // decrease set
     const decreaseSetCount = () => {
         if (setCount > 0) {
             setSetCount(setCount - 1);
         }
     };
 
+    // increase rep
     const increaseRepCount = () => {
         setRepCount(repCount + 1);
     };
 
+    // decrease rep
     const decreaseRepCount = () => {
         if (repCount > 0) {
             setRepCount(repCount - 1);
         }
     };
 
+    // what is on the screen
     return (
         <div className="repetition">
             <h2>{name}</h2>

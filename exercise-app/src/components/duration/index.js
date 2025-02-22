@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 function DurationExercise({ name }) {
+    // useStates
     const [timer, setTimer] = useState(0);
     const [isActive, setIsActive] = useState(false);
 
+    // timer that I dont understand but thank god for youtube
     useEffect(() => {
         let interval = null;
         if (isActive) {
@@ -16,19 +18,23 @@ function DurationExercise({ name }) {
         return () => clearInterval(interval);
     }, [isActive, timer]);
 
+    // start timer
     const start = () => {
         setIsActive(true);
     };
 
+    // stop timer
     const stop = () => {
         setIsActive(false);
     }
 
+    // reset timer
     const reset = () => {
         setIsActive(false);
         setTimer(0);
     };
 
+    // make time look good
     const formatTime = (seconds) => {
         const getSeconds = `0${seconds % 60}`.slice(-2);
         const minutes = Math.floor(seconds / 60);
@@ -36,6 +42,7 @@ function DurationExercise({ name }) {
         return `${getMinutes}:${getSeconds}`;
     };
 
+    // what is on the screen
     return (
         <div className="duration">
             <h2>{name}</h2>
